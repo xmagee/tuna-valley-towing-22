@@ -30,3 +30,7 @@
   position: relative;
   bottom: 55px;
 }
+
+.s-marginbottom-n3 {
+  margin-bottom: -3px;
+}
