@@ -1,0 +1,26 @@
+
+* {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.s-no-border {
+  border: 0;
+}
+
+.s-text-center {
+  text-align: center;
+}
+
+.s-min-height-460 {
+  min-height: 460px;
+}
+
+.s-font-size-120 {
+  font-size: 120px;
+}
+
+.s-pos-rel-bot-55 {
+  position: relative;
+  bottom: 55px;
+}

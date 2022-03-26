@@ -10,9 +10,9 @@ export default function Home() {
 
 		return (
 			<div className="w3-third">
-				<div className="w3-card w3-container" style={{ minHeight: 460 }}>
+				<div className="w3-card w3-container s-min-height-460">
 					<h3>{title}</h3><br />
-					<i className={`fa ${icon} w3-margin-bottom w3-text-theme`} style={{ fontSize: 120 }}></i>
+					<i className={`fa ${icon} w3-margin-bottom w3-text-theme s-font-size-120`}></i>
 					<p>{desc}</p>
 					<p>24/7 towing.</p>
 					<p>Covering Bradford, PA,</p>
@@ -38,9 +38,9 @@ export default function Home() {
 							<h3>{addr}</h3>
 							<p>Bradford, PA</p>
 						</li>
-						<li style={{ textAlign: 'center' }}>
+						<li className='s-text-center'>
 							<iframe src={googleMapsEmbedLink}
-								width={600} height={450} style={{ border: 0 }} allowfullscreen={false}
+								width={600} height={450} className="s-no-border" allowfullscreen={false}
 								loading="lazy" referrerpolicy="no-referrer-when-downgrade" />
 						</li>
 					</ul>
@@ -129,7 +129,7 @@ export default function Home() {
 			<footer className="w3-container w3-theme-dark w3-padding-16">
 				<h3>&copy; Tuna Valley Towing & Recovery LLC, {currentYear}</h3>
 				<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-				<div style={{ position: 'relative', bottom: 55 }} className="w3-tooltip w3-right">
+				<div className="w3-tooltip w3-right s-pos-rel-bot-55">
 					<span className="w3-text w3-theme-light w3-padding">Go To Top</span>
 					<a className="w3-text-white" href="#myHeader"><span className="w3-xlarge">
 						<i className="fa fa-chevron-circle-up"></i></span></a>
