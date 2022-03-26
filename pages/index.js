@@ -3,6 +3,25 @@ import Head from 'next/head'
 export default function Home() {
 	const currentYear = new Date().getFullYear();
 
+	function Third(props) {
+		const {
+			title, desc, icon
+		} = props
+
+		return (
+			<div className="w3-third">
+				<div className="w3-card w3-container" style={{ minHeight: 460 }}>
+					<h3>{title}</h3><br />
+					<i className={`fa ${icon} w3-margin-bottom w3-text-theme`} style={{ fontSize: 120 }}></i>
+					<p>{desc}</p>
+					<p>24/7 towing.</p>
+					<p>Covering Bradford, PA,</p>
+					<p>and surrounding areas.</p>
+				</div>
+			</div>
+		)
+	}
+
 	return (
 		<>
 			<Head>
@@ -25,38 +44,28 @@ export default function Home() {
 			</header>
 
 			<div className="w3-row-padding w3-center w3-margin-top">
-				<div className="w3-third">
-					<div className="w3-card w3-container" style={{ minHeight: 460 }}>
-						<h3>Medium Duty Towing</h3><br />
-						<i className="fa fa-car w3-margin-bottom w3-text-theme" style={{ fontSize: 120 }}></i>
-						<p>Flatbed and wrecker available</p>
-						<p>24/7 towing.</p>
-						<p>Covering Bradford, PA,</p>
-						<p>and surrounding areas.</p>
-					</div>
-				</div>
-
-				<div className="w3-third">
-					<div className="w3-card w3-container" style={{ minHeight: 460 }}>
-						<h3>Lockouts</h3><br />
-						<i className="fa fa-unlock w3-margin-bottom w3-text-theme" style={{ fontSize: 120 }}></i>
-						<p>Keys locked in car?</p>
-						<p>24/7 Unlocks</p>
-						<p>Covering Bradford, PA,</p>
-						<p>and surrounding areas.</p>
-					</div>
-				</div>
-
-				<div className="w3-third">
-					<div className="w3-card w3-container" style={{ minHeight: 460 }}>
-						<h3>Jump Starts</h3><br />
-						<i className="fa fa-bolt w3-margin-bottom w3-text-theme" style={{ fontSize: 120 }}></i>
-						<p>Dead battery?</p>
-						<p>24/7 jumpstarts</p>
-						<p>Covering Bradford, PA,</p>
-						<p>and surrounding areas.</p>
-					</div>
-				</div>
+				{[
+					{
+						title: 'Medium Duty Towing', 
+						desc: 'Flatbed and wrecker available', 
+						icon: 'fa-car'
+					},
+					{
+						title: 'Lockouts', 
+						desc: 'Keys locked in car?', 
+						icon: 'fa-unlock'
+					},
+					{
+						title: 'Jump Starts', 
+						desc: 'Dead battery?', 
+						icon: 'fa-bolt'
+					}
+				].map((i, ind) => (
+					<Third key={ind} 
+						title={i.title} 
+						desc={i.desc}
+						icon={i.icon} />
+				))}
 			</div>
 
 			<hr />
