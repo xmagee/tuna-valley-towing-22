@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 export default function Home() {
-	const currentYear = new Date().getFullYear();
+	const currentYear = new Date().getFullYear()
 
 	function Third(props) {
 		const {
@@ -17,6 +17,34 @@ export default function Home() {
 					<p>24/7 towing.</p>
 					<p>Covering Bradford, PA,</p>
 					<p>and surrounding areas.</p>
+				</div>
+			</div>
+		)
+	}
+
+	function Half(props) {
+		const {
+			title, addr, googleMapsEmbedLink
+		} = props
+
+		return (
+			<div className="w3-half">
+				<div className="w3-card white">
+					<div className="w3-container w3-theme">
+						<h3>{title}</h3>
+					</div>
+					<ul className="w3-ul w3-border-top">
+						<li>
+							<h3>{addr}</h3>
+							<p>Bradford, PA</p>
+						</li>
+						<li style={{ textAlign: 'center' }}>
+							<iframe src={googleMapsEmbedLink}
+								width={600} height={450} style={{ border: 0 }} allowfullscreen={false}
+								loading="lazy" referrerpolicy="no-referrer-when-downgrade" />
+						</li>
+					</ul>
+					<div className="w3-container w3-theme w3-large"><span className="w3-right">&nbsp;</span></div>
 				</div>
 			</div>
 		)
@@ -46,23 +74,23 @@ export default function Home() {
 			<div className="w3-row-padding w3-center w3-margin-top">
 				{[
 					{
-						title: 'Medium Duty Towing', 
-						desc: 'Flatbed and wrecker available', 
+						title: 'Medium Duty Towing',
+						desc: 'Flatbed and wrecker available',
 						icon: 'fa-car'
 					},
 					{
-						title: 'Lockouts', 
-						desc: 'Keys locked in car?', 
+						title: 'Lockouts',
+						desc: 'Keys locked in car?',
 						icon: 'fa-unlock'
 					},
 					{
-						title: 'Jump Starts', 
-						desc: 'Dead battery?', 
+						title: 'Jump Starts',
+						desc: 'Dead battery?',
 						icon: 'fa-bolt'
 					}
 				].map((i, ind) => (
-					<Third key={ind} 
-						title={i.title} 
+					<Third key={ind}
+						title={i.title}
 						desc={i.desc}
 						icon={i.icon} />
 				))}
@@ -76,47 +104,24 @@ export default function Home() {
 			</div>
 
 			<div className="w3-row-padding">
-
-			<div className="w3-half">
-					<div className="w3-card white">
-						<div className="w3-container w3-theme">
-							<h3>Main Office</h3>
-						</div>
-						<ul className="w3-ul w3-border-top">
-							<li>
-								<h3>164 E. Main St.</h3>
-								<p>Bradford, PA</p>
-							</li>
-							<li style={{ textAlign: 'center' }}>
-								<iframe 
-									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.888926258478!2d-78.63915888442459!3d41.95972076828111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89cd8038fe233d7d%3A0x4f7f4fee8c0be27d!2s164%20E%20Main%20St%2C%20Bradford%2C%20PA%2016701!5e0!3m2!1sen!2sus!4v1648322458215!5m2!1sen!2sus" 
-									width={600} height={450} style={{ border: 0 }} allowfullscreen={false} loading="lazy" 
-									referrerpolicy="no-referrer-when-downgrade" />
-							</li>
-						</ul>
-						<div className="w3-container w3-theme w3-large"><span className="w3-right">&nbsp;</span></div>
-					</div>
-				</div>
-
-				<div className="w3-half">
-					<div className="w3-card white">
-						<div className="w3-container w3-theme">
-							<h3>Storage Lot</h3>
-						</div>
-						<ul className="w3-ul w3-border-top">
-							<li>
-								<h3>156 Seward Ave.</h3>
-								<p>Bradford, PA</p>
-							</li>
-							<li style={{ textAlign: 'center' }}>
-								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1183.018049114121!2d-78.62999888808889!3d41.974848714999595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89cd806ddc8cb3f9%3A0x1cb45e73dc8c57fc!2s156%20Seaward%20Ave%2C%20Bradford%2C%20PA%2016701!5e0!3m2!1sen!2sus!4v1648322880290!5m2!1sen!2sus" 
-								width={600} height={450} style={{ border: 0 }} allowfullscreen={false} 
-								loading="lazy" referrerpolicy="no-referrer-when-downgrade" />
-							</li>
-						</ul>
-						<div className="w3-container w3-theme w3-large"><span className="w3-right">&nbsp;</span></div>
-					</div>
-				</div>
+				{[
+					{
+						title: 'Main Office',
+						addr: '164 E. Main St.',
+						map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.888926258478!2d-78.63915888442459!3d41.95972076828111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89cd8038fe233d7d%3A0x4f7f4fee8c0be27d!2s164%20E%20Main%20St%2C%20Bradford%2C%20PA%2016701!5e0!3m2!1sen!2sus!4v1648322458215!5m2!1sen!2sus'
+					},
+					{
+						title: 'Storage Lot',
+						addr: '156 Seward Ave.',
+						map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1183.018049114121!2d-78.62999888808889!3d41.974848714999595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89cd806ddc8cb3f9%3A0x1cb45e73dc8c57fc!2s156%20Seaward%20Ave%2C%20Bradford%2C%20PA%2016701!5e0!3m2!1sen!2sus!4v1648322880290!5m2!1sen!2sus'
+					}
+				]
+					.map((i, ind) => (
+						<Half key={ind}
+							title={i.title}
+							addr={i.addr}
+							googleMapsEmbedLink={i.map} />
+					))}
 			</div>
 
 			<hr />
