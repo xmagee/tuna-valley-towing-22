@@ -40,7 +40,7 @@ export default function Home() {
 						</li>
 						<li className='s-text-center'>
 							<iframe src={googleMapsEmbedLink}
-								width={600} height={450} className="s-no-border" allowfullscreen={false}
+								width={600} height={450} className="s-no-border" allowFullScreen={false}
 								loading="lazy" referrerpolicy="no-referrer-when-downgrade" />
 						</li>
 					</ul>
@@ -65,7 +65,7 @@ export default function Home() {
 					<div className="w3-padding-32">
 						<a href="tel:8143319454" style={{ fontWeight: 900 }}
 							className="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey">
-							CALL NOW!&nbsp;<i class="fa fa-mobile s-marginbottom-n3" aria-hidden="true"></i>
+							CALL NOW!&nbsp;<i className="fa fa-mobile s-marginbottom-n3" aria-hidden="true"></i>
 						</a>
 					</div>
 				</div>
@@ -129,7 +129,7 @@ export default function Home() {
 
 			<footer className="w3-container w3-theme-dark w3-padding-16">
 				<h3>&copy; Tuna Valley Towing & Recovery LLC, {currentYear}</h3>
-				<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+				<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" rel="noreferrer">w3.css</a></p>
 				<div className="w3-tooltip w3-right s-pos-rel-bot-55">
 					<span className="w3-text w3-theme-light w3-padding">Go To Top</span>
 					<a className="w3-text-white" href="#myHeader"><span className="w3-xlarge">
